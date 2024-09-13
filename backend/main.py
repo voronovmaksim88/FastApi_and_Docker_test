@@ -6,7 +6,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,  # type: ignore
-    allow_origins=["*"],
+    allow_origins=[
+         "http://localhost:5173",
+         "http://176.124.213.202",
+        ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -15,7 +18,7 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "Hello, World!!!!"}
+    return {"message": "Hello, World from SibPLC !"}
 
 
 if __name__ == "__main__":
