@@ -3,8 +3,10 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.venv_home" />
+      <excludeFolder url="file://$MODULE_DIR$/.venv_home3" />
+      <excludeFolder url="file://$MODULE_DIR$/.venv_home4" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.12 (FastApi_and_Docker_test) (2)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.12 (FastApi_and_Docker_test)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">

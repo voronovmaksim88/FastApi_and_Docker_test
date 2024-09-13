@@ -12,10 +12,4 @@ COPY main.py ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Указываем команду для запуска приложения
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
-
-# команда для сборки
-# docker build -t fastapi-app .
-
-# команда для запуска
-# docker run -p 8000:8000 fastapi-app
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
