@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.responses import HTMLResponse
 import uvicorn
 
 app = FastAPI()
@@ -7,7 +8,6 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,  # type: ignore
     allow_origins=[
-         "http://localhost:5173",
          "http://176.124.213.202",
         ],
     allow_credentials=True,
@@ -17,8 +17,11 @@ app.add_middleware(
 
 
 @app.get("/")
-async def root():
-    return {"message": "Hello, World from SibPLC !"}
+def home():
+    """Домашняя страница"""
+    html_content = "<h2>FastAPI is the best backend framework</h2>"
+    html_content += '<p>Интерактивная документация на <a href="/docs">/docs</a></p>'
+    return HTMLResponse(content=html_content)
 
 
 if __name__ == "__main__":
